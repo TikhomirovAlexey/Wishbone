@@ -1,0 +1,82 @@
+body
+    font-family: var(--font-family)
+    color: var(--color-dark)
+    background-color: var(--color-lite)
+
+a, button
+    transition: all .3s
+    white-space: nowrap
+
+.container
+    max-width: calc( var(--container-width) + var(--container-padding-inline) * 2 )
+    padding-inline: var(--container-padding-inline)
+    margin-inline: auto
+
+.visually-hidden
+    @include visually-hidden
+
+.with-preface::before
+    content: attr(data-preface)
+    font-size: 14px
+    color: var(--color-accent)
+    line-height: 1.43
+    text-transform: uppercase
+    letter-spacing: 2px
+
+.title
+    font-size: 64px
+    font-weight: 400
+    line-height: 1.1
+
+.heading
+    color: var(--color-accent-dark)
+    font-size: 32px
+    font-weight: 400
+    line-height: 1.18
+    &_mini
+        font-size: 14px
+        line-height: 1.43
+        letter-spacing: 2px
+    &_big
+        color: var(--color-dark)
+        font-size: 40px
+        line-height: 1.05
+        text-align: center
+    &_color-lite
+        color: var(--color-lite)
+
+.text
+    color: var(--color-accent-dark)
+    font-size: 16px
+    font-weight: 400
+    &_color-lite
+        color: var(--color-lite-alternate)
+
+.link
+    font-size: 16px
+    font-weight: 400
+
+.button
+    color: var(--color-lite)
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: 0.4px
+    background-color: var(--color-dark)
+    padding: 10px 18px
+    border: 2px solid transparent
+    border-radius: 14px
+    @include hover
+        background-color: var(--color-lite)
+        color: var(--color-dark)
+        border-color: currentColor
+    &_transparent
+        background-color: transparent
+        color: var(--color-dark)
+        @include hover
+            background-color: transparent
+
+.section-padding-block
+    padding-block: var(--section-padding-block)
+    &_small
+        padding-block: var(--section-padding-block-small)
+
