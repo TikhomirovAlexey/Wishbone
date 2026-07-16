@@ -55,6 +55,22 @@ a, button
 .link
     font-size: 16px
     font-weight: 400
+    display: flex
+    flex-direction: column
+    gap: 4px
+    &::after
+       content: ''
+       display: block
+       height: 2px
+       width: 20%
+       background-color: currentColor
+       transition-duration: 0.3s 
+       opacity: 0
+    @include hover
+        &::after
+            opacity: 1
+            width: 100%
+    
 
 .button
     color: var(--color-lite)
@@ -79,4 +95,8 @@ a, button
     padding-block: var(--section-padding-block)
     &_small
         padding-block: var(--section-padding-block-small)
+
+.list
+    display: flex
+    align-items: center
 

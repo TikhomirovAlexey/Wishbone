@@ -81,6 +81,10 @@ a:where([class]) {
   text-decoration: none;
 }
 
+a:where([class]) {
+  color: inherit;
+}
+
 button,
 label {
   cursor: pointer;
@@ -216,6 +220,30 @@ a, button {
 .link {
   font-size: 16px;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 20%;
+  background-color: currentColor;
+  transition-duration: 0.3s;
+  opacity: 0;
+}
+@media (hover: hover) {
+  .link:hover::after {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .link:active::after {
+    opacity: 1;
+    width: 100%;
+  }
 }
 
 .button {
@@ -262,4 +290,29 @@ a, button {
 }
 .section-padding-block_small {
   padding-block: var(--section-padding-block-small);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+.nav__list {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+.nav__link {
+  padding-block: 12px;
 }/*# sourceMappingURL=style.css.map */
