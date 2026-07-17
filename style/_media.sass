@@ -1,0 +1,27 @@
+@media (width <= 1024px)
+
+    .link, .button
+        font-size: 14px
+
+    .nav
+        column-gap: 24px
+        &__list
+            column-gap: 24px
+        &__link
+            padding-block: 8px
+
+@media (width <= 768px)
+
+    .button
+        padding: 6px 12px
+
+    .nav
+        display: contents
+        column-gap: 16px
+        &__list
+            column-gap: 16px
+            order: 1
+            justify-self: center
+            grid-column: 1 / -1
+        &__link
+            padding-block: 6px
