@@ -182,7 +182,7 @@ a, button {
 }
 
 .title {
-  font-size: clamp(42px, 5.4794520548vw, 64px);
+  font-size: clamp(38px, 5.4794520548vw, 64px);
   font-weight: 400;
   line-height: 1.1;
 }
@@ -335,7 +335,7 @@ a, button {
 }
 .banner__body {
   max-width: 600px;
-  margin-inline: 60px;
+  margin: 20px 60px;
 }
 .banner__title {
   display: flex;
@@ -373,6 +373,17 @@ a, button {
   }
   .banner__text {
     margin-bottom: 20px;
+  }
+}
+@media (width <= 900px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+  .banner__body {
+    margin: 18px 16px;
+  }
+  .banner__img {
+    display: none;
   }
 }
 @media (width <= 768px) {
