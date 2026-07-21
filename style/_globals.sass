@@ -1,5 +1,6 @@
 body
     font-family: var(--font-family)
+    font-weight: 400
     color: var(--color-dark)
     background-color: var(--color-lite)
 
@@ -25,13 +26,11 @@ a, button
 
 .title
     @include fluid-text(38, 64)
-    font-weight: 400
     line-height: 1.1
 
 .heading
     color: var(--color-accent-dark)
-    font-size: 32px
-    font-weight: 400
+    @include fluid-text(26, 32)
     line-height: 1.18
     &_mini
         font-size: 14px
@@ -39,7 +38,7 @@ a, button
         letter-spacing: 2px
     &_big
         color: var(--color-dark)
-        font-size: 40px
+        @include fluid-text(32, 40)
         line-height: 1.05
         text-align: center
     &_color-lite
@@ -48,13 +47,11 @@ a, button
 .text
     color: var(--color-accent-dark)
     font-size: 16px
-    font-weight: 400
     &_color-lite
         color: var(--color-lite-alternate)
 
 .link
     font-size: 16px
-    font-weight: 400
     position: relative
     &::after
         content: ''
@@ -75,7 +72,6 @@ a, button
 .button
     color: var(--color-lite)
     font-size: 16px
-    font-weight: 400
     letter-spacing: 0.4px
     background-color: var(--color-dark)
     padding: 10px 18px

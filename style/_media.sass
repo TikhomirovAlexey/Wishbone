@@ -1,5 +1,10 @@
 @media (width <= 1024px)
 
+    .section-padding-block
+        padding-block: calc( var(--section-padding-block) / 2 )
+        &_small
+            padding-block: calc( var(--section-padding-block-small) / 2 )
+
     .link, .button
         font-size: 14px
 
@@ -21,6 +26,10 @@
         &__text
             margin-bottom: 20px
 
+    .our-firm
+        justify-content: space-around
+        column-gap: 18px
+
 @media (width <= 900px)
 
     .banner
@@ -31,6 +40,11 @@
             display: none
 
 @media (width <= 768px)
+
+    .section-padding-block
+        padding-block: calc( var(--section-padding-block) / 4 )
+        &_small
+            padding-block: calc( var(--section-padding-block-small) / 3 )
 
     .text
         font-size: 14px
@@ -48,3 +62,6 @@
             grid-column: 1 / -1
         &__link
             padding-block: 6px
+
+    .figcaption
+        padding: 16px
