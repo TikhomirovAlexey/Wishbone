@@ -382,6 +382,21 @@ a, button {
   color: var(--color-accent);
 }
 
+.reeding-house {
+  min-height: 600px;
+  background-image: url("../image/white-house.jpg");
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.reeding-house__body {
+  max-width: 285px;
+  margin-right: 75px;
+}
+
 @media (width <= 1024px) {
   .section-padding-block {
     padding-block: calc(var(--section-padding-block) / 2);
@@ -419,6 +434,13 @@ a, button {
     justify-content: space-around;
     -moz-column-gap: 18px;
          column-gap: 18px;
+  }
+  .reeding-house {
+    min-height: 400px;
+    background-position: center;
+  }
+  .reeding-house__body {
+    margin-right: 42px;
   }
 }
 @media (width <= 900px) {
@@ -462,5 +484,12 @@ a, button {
   }
   .figcaption {
     padding: 16px;
+  }
+  .reeding-house {
+    min-height: 300px;
+    text-align: right;
+  }
+  .reeding-house__body {
+    margin-right: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
