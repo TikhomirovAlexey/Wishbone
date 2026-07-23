@@ -775,6 +775,7 @@ a, button {
     align-items: center;
   }
   .featured-projects__heading {
+    text-align: center;
     margin-bottom: 12px;
   }
   .featured-projects__text {
