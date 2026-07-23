@@ -41,6 +41,13 @@
         &__item
             padding-inline: 16px
 
+    .our-team
+        grid-template-columns: repeat(2, auto)
+        justify-content: center
+
+    .avatars-box
+        grid-template-columns: 1fr
+
 @media (width <= 900px)
 
     .banner
@@ -126,6 +133,32 @@
         &__text
             text-align: center
             margin-bottom: 24px
+
+    .our-team
+        grid-template-columns: auto
+        justify-items: center
+        text-align: center
+        &__info
+            display: contents
+        &__heading
+            margin-bottom: 0px
+        &__text
+            margin-bottom: 16px
+        &__button
+            order: 2
+
+    .avatars-box
+        order: 1
+        display: flex
+        scroll-snap-type: x mandatory
+        overflow-x: scroll
+        max-width: 100%
+        justify-content: start
+        &__item
+            flex-shrink: 0
+            scroll-snap-align: start
+        &__figure
+            flex-direction: column
 
 @media (hover: none) and (pointer: coarse)
 
