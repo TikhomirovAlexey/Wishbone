@@ -78,3 +78,31 @@
     &__body
         max-width: 285px
         margin-right: 75px
+
+.how-we-do
+    display: flex
+    flex-direction: column
+    row-gap: 48px
+    &__heading
+        display: flex
+        flex-direction: column
+        row-gap: 12px
+        text-align: center
+    &__body
+        display: grid
+        grid-template-columns: repeat(3, minmax(230px, 378px))
+        column-gap: 16px
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        padding-inline: 42px
+        & > svg
+            color: var(--color-accent-dark)
+            margin-bottom: 16px
+    &__item-heading
+        color: var(--color-accent-dark)
+        font-size: 18px
+        line-height: 1.44
+        margin-bottom: 10px

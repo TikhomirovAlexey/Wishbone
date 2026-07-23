@@ -36,6 +36,10 @@
         &__body
             margin-right: 42px
 
+    .how-we-do
+        &__item
+            padding-inline: 16px
+
 @media (width <= 900px)
 
     .banner
@@ -77,4 +81,14 @@
         text-align: right
         &__body
             margin-right: 16px
-            
+
+    .how-we-do
+        &__heading
+            row-gap: 4px
+        &__body
+            display: grid
+            grid-template-columns: minmax(230px, 378px)
+            justify-content: center
+            row-gap: 28px
+        &__item
+            padding-inline: 0        
