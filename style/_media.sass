@@ -2,8 +2,9 @@
 
     .section-padding-block
         padding-block: calc( var(--section-padding-block) / 2 )
-        &_small
-            padding-block: calc( var(--section-padding-block-small) / 2 )
+
+    .section-padding-block-small
+        padding-block: calc( var(--section-padding-block-small) / 2 )
 
     .link, .button
         font-size: 14px
@@ -53,8 +54,9 @@
 
     .section-padding-block
         padding-block: calc( var(--section-padding-block) / 4 )
-        &_small
-            padding-block: calc( var(--section-padding-block-small) / 3 )
+
+    .section-padding-block-small
+        padding-block: calc( var(--section-padding-block-small) / 3 )
 
     .text
         font-size: 14px
@@ -92,3 +94,11 @@
             row-gap: 28px
         &__item
             padding-inline: 0        
+
+    .happy-customers
+        &__body
+            grid-template-columns: 1fr
+            justify-items: center
+        &__info
+            text-align: center
+

@@ -16,13 +16,18 @@ a, button
 .visually-hidden
     @include visually-hidden
 
-.with-preface::before
+.with-preface::before, .with-preface-lite::before
     content: attr(data-preface)
     font-size: 14px
-    color: var(--color-accent)
     line-height: 1.43
     text-transform: uppercase
     letter-spacing: 2px
+
+.with-preface::before
+    color: var(--color-accent)
+
+.with-preface-lite::before
+    color: var(--color-lite-alternate)
 
 .title
     @include fluid-text(38, 64)
@@ -59,7 +64,7 @@ a, button
         height: 2px
         width: 20%
         background-color: currentColor
-        transition-duration: 0.3s 
+        transition-duration: 0.3s
         opacity: 0
         position: absolute
         bottom: 10px
@@ -68,7 +73,7 @@ a, button
         &::after
             opacity: 1
             width: 100%
-    
+
 .button
     color: var(--color-lite)
     font-size: 16px
@@ -89,10 +94,10 @@ a, button
 
 .section-padding-block
     padding-block: var(--section-padding-block)
-    &_small
+
+.section-padding-block-small
         padding-block: var(--section-padding-block-small)
 
 .list
     display: flex
     align-items: center
-
