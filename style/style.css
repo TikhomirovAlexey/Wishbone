@@ -406,9 +406,19 @@ a, button {
 .section-with-big-bg_the-marble {
   background-image: url("../image/white-ladder.jpg");
 }
+.section-with-big-bg_the-swirling {
+  background-image: url("../image/white-ladder-2.jpg");
+}
 .section-with-big-bg__body {
   max-width: 285px;
   margin-right: 75px;
+}
+.section-with-big-bg__body_text-start {
+  margin-right: 0;
+  margin-left: 60px;
+}
+.section-with-big-bg_text-start {
+  justify-content: start;
 }
 
 .how-we-do {
@@ -568,8 +578,15 @@ a, button {
     min-height: 300px;
     text-align: right;
   }
+  .section-with-big-bg_text-start {
+    text-align: left;
+  }
   .section-with-big-bg__body {
     margin-right: 16px;
+  }
+  .section-with-big-bg__body_text-start {
+    margin-right: 0;
+    margin-left: 16px;
   }
   .how-we-do__heading {
     row-gap: 4px;
