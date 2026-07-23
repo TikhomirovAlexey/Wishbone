@@ -382,9 +382,9 @@ a, button {
   color: var(--color-accent);
 }
 
-.reeding-house {
+.section-with-big-bg {
   min-height: 600px;
-  background-image: url("../image/white-house.jpg");
+  background-color: var(--color-lite-alternate);
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -392,7 +392,13 @@ a, button {
   align-items: center;
   justify-content: end;
 }
-.reeding-house__body {
+.section-with-big-bg_reeding {
+  background-image: url("../image/white-house.jpg");
+}
+.section-with-big-bg_the-marble {
+  background-image: url("../image/white-ladder.jpg");
+}
+.section-with-big-bg__body {
   max-width: 285px;
   margin-right: 75px;
 }
@@ -470,11 +476,11 @@ a, button {
     -moz-column-gap: 18px;
          column-gap: 18px;
   }
-  .reeding-house {
+  .section-with-big-bg {
     min-height: 400px;
     background-position: center;
   }
-  .reeding-house__body {
+  .section-with-big-bg__body {
     margin-right: 42px;
   }
   .how-we-do__item {
@@ -523,11 +529,11 @@ a, button {
   .figcaption {
     padding: 16px;
   }
-  .reeding-house {
+  .section-with-big-bg {
     min-height: 300px;
     text-align: right;
   }
-  .reeding-house__body {
+  .section-with-big-bg__body {
     margin-right: 16px;
   }
   .how-we-do__heading {
