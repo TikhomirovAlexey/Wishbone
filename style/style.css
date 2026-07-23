@@ -131,6 +131,7 @@ svg * {
 :root {
   --font-family: 'Poppins', sans-serif;
   --color-lite: #ffffff;
+  --color-lite-darkened: #f7f7f7;
   --color-lite-with-opacity: #ffffff80;
   --color-lite-alternate: #ECE7E4;
   --color-dark: #1B1A1A;
@@ -487,6 +488,9 @@ a, button {
 }
 
 .featured-projects {
+  background-color: var(--color-lite-darkened);
+}
+.featured-projects__body {
   display: flex;
   flex-direction: column;
 }
