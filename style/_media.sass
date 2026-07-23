@@ -32,7 +32,7 @@
         column-gap: 18px
 
     .section-with-big-bg
-        min-height: 400px    
+        min-height: 400px
         background-position: center
         &__body
             margin-right: 42px
@@ -49,6 +49,18 @@
             margin: 18px 16px
         &__img
             display: none
+
+    .card-box
+        scroll-snap-type: x mandatory
+        overflow-x: scroll
+        max-width: 100%
+        justify-content: start
+        margin-bottom: 24px
+        grid-template-columns: repeat(3, 300px)
+
+    .card
+        flex-shrink: 0
+        scroll-snap-align: start
 
 @media (width <= 768px)
 
@@ -98,7 +110,7 @@
             justify-content: center
             row-gap: 28px
         &__item
-            padding-inline: 0        
+            padding-inline: 0
 
     .happy-customers
         &__body
@@ -107,3 +119,17 @@
         &__info
             text-align: center
 
+    .featured-projects
+        align-items: center
+        &__heading
+            margin-bottom: 12px
+        &__text
+            text-align: center
+            margin-bottom: 24px
+
+@media (hover: none) and (pointer: coarse)
+
+    .card
+        &__body
+            opacity: 1
+            transform: translateX(0)

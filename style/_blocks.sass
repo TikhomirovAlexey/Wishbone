@@ -138,3 +138,52 @@
     align-items: center
     &__item
         padding: 40px
+
+.featured-projects
+    display: flex
+    flex-direction: column
+    &__heading
+        margin-bottom: 16px
+    &__text
+        max-width: 580px
+        color: var(--color-accent)
+        @include fluid-text(18, 24)
+        line-height: 1.25
+        margin-bottom: 44px
+    &__button
+        align-self: center
+
+.card-box
+    display: grid
+    grid-template-columns: repeat(3, minmax(230px, 375px))
+    justify-content: space-between
+    gap: 16px
+    margin-bottom: 42px
+
+.card
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    overflow: hidden
+    &_1
+        background-image: url('../image/card-1.jpg')
+    &_2
+        background-image: url('../image/card-2.jpg')
+    &_3
+        background-image: url('../image/card-3.jpg')
+    &__body
+        aspect-ratio: 0.83
+        padding: 40px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: start
+        opacity: 0
+        transform: translateX(50px)
+        transition-duration: .3s
+        @include hover
+            opacity: 1
+            transform: translateX(0px)
+    &__heading
+        display: flex
+        flex-direction: column

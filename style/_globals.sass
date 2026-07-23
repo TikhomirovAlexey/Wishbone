@@ -83,7 +83,8 @@ a, button
     border: 2px solid transparent
     border-radius: 14px
     @include hover
-        background-color: var(--color-lite)
+        background-color: var(--color-lite-with-opacity)
+        backdrop-filter: blur(2px)
         color: var(--color-dark)
         border-color: currentColor
     &_transparent

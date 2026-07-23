@@ -131,6 +131,7 @@ svg * {
 :root {
   --font-family: 'Poppins', sans-serif;
   --color-lite: #ffffff;
+  --color-lite-with-opacity: #ffffff80;
   --color-lite-alternate: #ECE7E4;
   --color-dark: #1B1A1A;
   --color-accent-lite: #CEC4BC;
@@ -262,14 +263,16 @@ a, button {
 }
 @media (hover: hover) {
   .button:hover {
-    background-color: var(--color-lite);
+    background-color: var(--color-lite-with-opacity);
+    backdrop-filter: blur(2px);
     color: var(--color-dark);
     border-color: currentColor;
   }
 }
 @media (hover: none) {
   .button:active {
-    background-color: var(--color-lite);
+    background-color: var(--color-lite-with-opacity);
+    backdrop-filter: blur(2px);
     color: var(--color-dark);
     border-color: currentColor;
   }
@@ -483,6 +486,75 @@ a, button {
   padding: 40px;
 }
 
+.featured-projects {
+  display: flex;
+  flex-direction: column;
+}
+.featured-projects__heading {
+  margin-bottom: 16px;
+}
+.featured-projects__text {
+  max-width: 580px;
+  color: var(--color-accent);
+  font-size: clamp(18px, 2.0547945205vw, 24px);
+  line-height: 1.25;
+  margin-bottom: 44px;
+}
+.featured-projects__button {
+  align-self: center;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(230px, 375px));
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 42px;
+}
+
+.card {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.card_1 {
+  background-image: url("../image/card-1.jpg");
+}
+.card_2 {
+  background-image: url("../image/card-2.jpg");
+}
+.card_3 {
+  background-image: url("../image/card-3.jpg");
+}
+.card__body {
+  aspect-ratio: 0.83;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  opacity: 0;
+  transform: translateX(50px);
+  transition-duration: 0.3s;
+}
+@media (hover: hover) {
+  .card__body:hover {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@media (hover: none) {
+  .card__body:active {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.card__heading {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (width <= 1024px) {
   .section-padding-block {
     padding-block: calc(var(--section-padding-block) / 2);
@@ -541,6 +613,18 @@ a, button {
   }
   .banner__img {
     display: none;
+  }
+  .card-box {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    max-width: 100%;
+    justify-content: start;
+    margin-bottom: 24px;
+    grid-template-columns: repeat(3, 300px);
+  }
+  .card {
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 }
 @media (width <= 768px) {
@@ -606,5 +690,21 @@ a, button {
   }
   .happy-customers__info {
     text-align: center;
+  }
+  .featured-projects {
+    align-items: center;
+  }
+  .featured-projects__heading {
+    margin-bottom: 12px;
+  }
+  .featured-projects__text {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .card__body {
+    opacity: 1;
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=style.css.map */
