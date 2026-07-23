@@ -200,7 +200,7 @@
         margin-bottom: 14px
     &__text
         margin-bottom: 30px
-        
+
 .avatars-box
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -216,3 +216,30 @@
         display: flex
         flex-direction: column
         max-width: 570px
+
+.footer
+    background-color: var(--color-lite-darkened)
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: end
+    &__info
+        display: flex
+        flex-direction: column
+        row-gap: 20px
+    &__text
+        color: var(--color-accent)
+        font-size: 14px
+        line-height: 1.42
+        & > a
+            color: inherit
+
+.socials-contacts
+    display: flex
+    column-gap: 8px
+    &__link
+        width: 40px
+        aspect-ratio: 1
+        display: flex
+        justify-content: center
+        align-items: center
